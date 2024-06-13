@@ -4,10 +4,9 @@ import ChannelCard from './ChannelCard'
 
 
 const Videos = ({videos}) => {
-  console.log(videos)
   return (
     <Stack direction='row' flexWrap='wrap' justifyContent='start' gap={2}>
-      {videos && videos.map((vid, idx) => (
+      { videos.map((vid, idx) => (
         <Box key={idx}>
           {vid.id.videoId && <VideoCard video={vid}/>}
           {vid.id.channelId && <ChannelCard channelDetail={vid}/>}
